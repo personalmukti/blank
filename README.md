@@ -1,61 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><h1>BLANK PROJECT</h1></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+Created By : Mukti
 </p>
 
-## About Laravel
+## About Blank Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Blank Project is empty project that already has Laravel Framework inside and also it has been integrated with Infyom Laravel Generator. So basically this project is kind of Boilerplate for you who want to clone or have Laravel + Infyom Project ready to use. This project is free to use, and if you need it, you can clone it and use it on your own purpose.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Built in Laravel](https://laravel.com/).
+- [Infyom Laravel Generator added](https://infyom.com/open-source/laravelgenerator/docs/8.0/installation).
+- [Admin LTE based Template](https://adminlte.io/).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Blank Project has provide so many basic function you need to build your Web Apps. All you need to do is clone this repository, setup the environment, and Whooossshhh... you ready to go.
 
-## Learning Laravel
+## Setup Environment
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- [Clone/Fork this Repository](https://github.com/personalmukti/blank.git).
+- Open Terminal inside the project.
+- Run composer update.
+- Copy .env.example to .env
+- Edit .env content such as :
+    <ul>
+        <li>APP_Name=Laravel to your Web App name. </li>
+        <li>DB_CONNECTION=mysql to your database connection.</li>
+        <li>DB_HOST=127.0.0.1 to your database host. </li>
+        <li>DB_PORT=3306 to your database port.</li>
+        <li>DB_DATABASE=laravel to your database name.</li>
+        <li>DB_USERNAME=root to your database username.</li>
+        <li>DB_PASSWORD= ************* to your database passwords.</li>
+        <li>And more environment setup you can edit to suit your setting.</li>
+    </ul>
+- The last part is set your app key by running this command "php artisan key:generate"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+That's it everything is ready!!!
 
-## Laravel Sponsors
+If you need more information about Laravel you can visit Laravel Official website to get the documentation and find the information you need.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Creating New CRUD Table
 
-### Premium Partners
+As I already said, this project have Infyom Laravel Generator installed, so if you want to create new CRUD table you just need to open "https://your-url/generator_builder" address on your browser.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+It will simply open Infyom Generator Builder page, and then you just need to put your model name, choose command type, custom table name, set option, etc. After that you just need to specify any field you want for your table along with their datatype and component type that we need to used in input/edit form. Last step is click Generate Button and wait for the process to complete. Congratulation you are successfully creating your new CRUD table.
 
-## Contributing
+### Rollback Your Generated CRUD
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+If you already generate new CRUD mechanism and then you find something wrong with your apps and you want to remove the CRUD table you just create. All you have to do is open "https://your-url/generator_builder" again on your browser address. Scroll down until you find Rollback part on the Generator Page. Just type the Model name you want to rollback. 
 
-## Code of Conduct
+*** Note : The model name you enter should match the model name you have created earlier.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+After that just click the Rollback Button and wait the process completed.
+
+## Future Upgrade
+
+This version contain standard feature provided for blank project app. Our next upgrade will add more dynamic function of Web Application Standard Modules like multilevel account, dynamic websettings that can load website name, logo, favicon, description, and version info from database. The purpose is to provide setting you can use to change basic information on your website. So this frameworks can reused in your other project and just need a simple tweak.
+
+## Using This Project
+
+Using this soure code is free, but please do not remove credits from this source code to honor the contributors and keep track on file changes made by who.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+This project not implement full security yet. It's already applied standard security developed under laravel environment. In our next upgrade hopefully we can add more secure mechanism on this project.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Blank Project using Open Source License, anyone can contribute on our development and get credits for that. [MIT license](https://opensource.org/licenses/MIT).
+
+## Last Word
+
+I'm really gratefull for anyone that already contribute on this project. 
+Sincerely, Mukti.
