@@ -5,19 +5,18 @@
         <div class="row justify-content-center">
             <div class="col-md-7" style="margin-top: 2%">
                 <div class="box">
-                    <h3 class="box-title" style="padding: 2%">Verify Your Email Address</h3>
+                    <h3 class="box-title" style="padding: 2%">Verifikasi alamat Email anda.</h3>
 
                     <div class="box-body">
                         @if (session('resent'))
                             <div class="alert alert-success" role="alert">
-                                A fresh verification link has been sent to your email address
+                                Link verifikasi sudah dikirim ke email anda.
                             </div>
                         @endif
                         <p>
-                            Before proceeding, please check your email for a verification link.If you did not receive
-                            the email,
+                            Sebelum melanjutkan, cek email verifikasi yang kami kirimkan. Jika anda belum menerimanya,
                         </p>
-                        <a href="{{ route('verification.resend') }}">click here to request another'</a>.
+                        <a href="{{ route('verification.resend') }}">klik di sini untuk mendapatkannya lagi.</a>.
                     </div>
                 </div>
             </div>

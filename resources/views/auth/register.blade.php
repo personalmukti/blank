@@ -38,17 +38,16 @@
 
     <div class="card">
         <div class="card-body register-card-body">
-            <p class="login-box-msg">@lang('auth.registration.title')</p>
+            <p class="login-box-msg">@lang('Form Pendaftaran akun')</p>
 
             <form method="post" action="{{ route('register') }}">
                 @csrf
-
                 <div class="input-group mb-3">
                     <input type="text"
                            name="name"
                            class="form-control @error('name') is-invalid @enderror"
                            value="{{ old('name') }}"
-                           placeholder="@lang('auth.full_name')">
+                           placeholder="@lang('Nama Lengkap')">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-user"></span>
@@ -64,7 +63,7 @@
                            name="email"
                            value="{{ old('email') }}"
                            class="form-control @error('email') is-invalid @enderror"
-                           placeholder="@lang('auth.email')">
+                           placeholder="@lang('Alamat Email')">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -79,7 +78,7 @@
                     <input type="password"
                            name="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="@lang('auth.password')">
+                           placeholder="@lang('Password')">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
@@ -94,7 +93,7 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="@lang('auth.confirm_password')">
+                           placeholder="@lang('Ulang Password')">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -105,20 +104,20 @@
                         <div class="icheck-primary">
                             <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                             <label for="agreeTerms">
-                                @lang('auth.registration.i_agree')
-                                <a href="#">@lang('auth.registration.terms')</a>
+                                @lang('Saya setuju terhadap ')
+                                <a href="#">@lang('Persyaratan Layanan')</a>
                             </label>
                         </div>
                     </div>
                     <!-- /.col -->
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">@lang('auth.register')</button>
+                        <button type="submit" class="btn btn-primary btn-block">@lang('Daftar')</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
-            <a href="{{ route('login') }}" class="text-center">@lang('auth.registration.have_membership')</a>
+            <a href="{{ route('login') }}" class="text-center">@lang('Sudah punya akun. Masuk!')</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
