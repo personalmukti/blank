@@ -40,7 +40,7 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">
-                @lang('auth.reset_password.title')
+                @lang('Reset password.')
             </p>
 
             <form action="{{ route('password.update') }}" method="POST">

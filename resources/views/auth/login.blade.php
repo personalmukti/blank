@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }} |  @lang('auth.login.title')</title>
+    <title>{{ config('app.name') }} |  @lang('Sign in')</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -43,7 +43,7 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">
-                @lang('auth.login.title')
+                @lang('Silahkan masuk untuk memulai sesi')
             </p>
 
             <form method="post" action="{{ url('/login') }}">
@@ -53,7 +53,7 @@
                     <input type="email"
                            name="email"
                            value="{{ old('email') }}"
-                           placeholder="@lang('auth.email')"
+                           placeholder="@lang('Email')"
                            class="form-control @error('email') is-invalid @enderror">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-envelope"></span></div>
@@ -66,7 +66,7 @@
                 <div class="input-group mb-3">
                     <input type="password"
                            name="password"
-                           placeholder="@lang('auth.password')"
+                           placeholder="@lang('Password')"
                            class="form-control @error('password') is-invalid @enderror">
                     <div class="input-group-append">
                         <div class="input-group-text">
@@ -83,22 +83,22 @@
                     <div class="col-8">
                         <div class="icheck-primary">
                             <input type="checkbox" id="remember">
-                            <label for="remember">@lang('auth.remember_me')</label>
+                            <label for="remember">@lang('Ingat Saya')</label>
                         </div>
                     </div>
 
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">@lang('auth.sign_in')</button>
+                        <button type="submit" class="btn btn-primary btn-block">@lang('Masuk')</button>
                     </div>
 
                 </div>
             </form>
 
             <p class="mb-1">
-                <a href="{{ route('password.request') }}">@lang('auth.login.forgot_password')</a>
+                <a href="{{ route('password.request') }}">@lang('Lupa Password')</a>
             </p>
             <p class="mb-0">
-                <a href="{{ route('register') }}" class="text-center">@lang('auth.login.register_membership')</a>
+                <a href="{{ route('register') }}" class="text-center">@lang('Belum punya akun. Daftarkan!')</a>
             </p>
         </div>
         <!-- /.login-card-body -->
