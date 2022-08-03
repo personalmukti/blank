@@ -54,6 +54,27 @@ class WebsettingController extends AppBaseController
     {
         $input = $request->all();
 
+        if ($request->hasFile('website_logo')){
+
+            //Validate the uploaded file
+            $Validation = $request->validate([
+
+                'website_logo' => 'required|file|mimes:jpeg,jpg,JPG,JPEG,PNG,png|max:30000'
+            ]);
+
+            // cache the file
+            $file = $Validation['website_logo'];
+
+            // generate a new filename. getClientOriginalExtension() for the file extension
+            $filename = 'img-' . time() . '.' . $file->getClientOriginalExtension();
+
+            // save to storage/app/infrastructure as the new $filename
+            $file-> move(public_path('storage/images'), $filename);
+            $path = "storage/images/".$filename;
+        }
+
+        $input['website_logo'] = $path;
+
         $websetting = $this->websettingRepository->create($input);
 
         Flash::success(__('messages.saved', ['model' => __('models/websettings.singular')]));
