@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Websetting;
+use App\Http\Controllers\WebsettingController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/*
-| Route::get('/', function () {
-|    return view('welcome');
-| });
-*/
+
+/*Route::get('/home', function () {
+
+    $konfigurasi = DB::table('websetting')->get();
+    return view('home', ['konfigurasi', $konfigurasi]);
+}); */
+
 
 Auth::routes();
 
